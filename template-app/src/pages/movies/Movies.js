@@ -28,13 +28,11 @@ import Card from '../../components/card/Card';
 
 /* Movie page */
 const Movies = () => {
-  const movieArray = [];
 
-  axios.get('https://jsonplaceholder.typicode.com/users')
+  /* const [movieArray] = useState(
+    axios.get('https://jsonplaceholder.typicode.com/users')
     .then(function (response) {
       const data = response.data;
-      movieArray.push(data);
-      /* console.log(movieArray); */
     })
     .catch(function (error) {
       // handle error
@@ -42,17 +40,34 @@ const Movies = () => {
     })
     .finally(function () {
       // always executed
-    });
+    }) 
+  ); */
+
+  const [todos, setTodos] = useState([[
+    {
+      text: 'hej o hå',
+    },
+    {
+      text: 'sftjhdstjdsytj',
+    },
+    {
+      text: 'dfjytdjy',
+    }
+  ]]);
 
   return (
     <div className="Movies">
       <h1>Movies</h1>
       <div className="cardGrid">
-        <Card>
-          {movieArray.map((item, i) => {
-            return <li key={i}>{item}</li>
-          })}
-        </Card>
+          
+          {todos[0].map((todo, index) => (
+            <Card key={index} index={index} todo={todo} />
+          ))}
+
+          {/* {movieArray.map((movie, index) => (
+            <Card key={index} index={index} movie={movie}></Card>
+          ))} */}
+          
       </div>
     </div>
   );
