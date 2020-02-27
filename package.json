@@ -1,0 +1,19 @@
+{
+  "name": "reacthookstemplate",
+  "version": "1.0.0",
+  "description": "This is a template for learning react hooks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jespert88/ReactHooksTemplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jespert88/ReactHooksTemplate/issues"
+  },
+  "homepage": "https://github.com/Jespert88/ReactHooksTemplate#readme"
+}
