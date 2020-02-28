@@ -8,6 +8,14 @@
     grid-row-gap: 30px; 
 }
 
+.moviePageTitle {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Noto Serif';
+    margin: 5%;
+    font-size: 40px;
+}
+
 /* Mobile */
 @media (min-width: 360px) and (max-width: 600px) {
     .cardGrid {
