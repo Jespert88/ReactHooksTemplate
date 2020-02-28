@@ -5,7 +5,7 @@ import './Movies.css';
 
 /* Components */
 import Card from '../../components/card/Card';
-
+import Footer from '../../components/footer/Footer';
 
 /* Movie page */
 const Movies = () => {
@@ -22,9 +22,9 @@ const Movies = () => {
   function getMovies() {
     axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY_HERE&language=en-US&page=1')
       .then(function (response) {
-        /* If i do this i get all data but it loops endlessly? why? */
         let data = response.data.results;
         setData(data);
+        console.log(data);
       })
       .catch(function (error) {
         // handle error
@@ -54,6 +54,7 @@ const Movies = () => {
             <Card key={index} index={index} movie={movie} />))
         }
       </div>
+      <Footer></Footer>
     </div>
   );
 

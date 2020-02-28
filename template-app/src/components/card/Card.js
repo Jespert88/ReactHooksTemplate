@@ -13,9 +13,9 @@ const Card = ({movie}) => {
             <img src={poster} className="img-fluid" />
             
             <div className="card-body">
-                <h5 className="card-title">{movie.original_title}</h5>
-                <p className="card-text">{/* {movie.email} */}</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <h5 className="card-title">{movie.title}</h5>
+                <p className="card-text">{movie.overview}</p>
+                {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
             </div>
         </div>
     );

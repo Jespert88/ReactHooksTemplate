@@ -1,0 +1,16 @@
+
+.Footer {
+   background-color: #4E7CA3;
+   text-align: center;
+}
+#footerImg {width: 150px; height: auto; margin: 20px;}
+
+/* Mobile */
+@media (min-width: 360px) and (max-width: 600px) {
+   
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
