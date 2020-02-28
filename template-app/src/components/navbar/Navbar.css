@@ -1,4 +1,6 @@
 
 #Navbar {background-color: #4E7CA3 !important;}
+#logoImg {height: 30px; width: auto; margin: 5px;}
+.navbar-brand {height: 10px; width: auto;}
 .navbar-brand {color: #fff !important;}
 .nav-link {color: #fff !important;}

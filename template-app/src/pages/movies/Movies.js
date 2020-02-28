@@ -6,20 +6,6 @@ import './Movies.css';
 /* Components */
 import Card from '../../components/card/Card';
 
-/* 
-axios.get('https://jsonplaceholder.typicode.com/users')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
-  });
-*/
 
 /* Movie page */
 const Movies = () => {
@@ -28,14 +14,13 @@ const Movies = () => {
   How to define states in react hooks. 
   With a state(jsonData) and a method for updating the state(setData) 
   */
-  /* const [jsonData, setData] = useState([]); */
- 
-  // Similar to componentDidMount and componentDidUpdate:
-  /* useEffect(() => {
+  const [jsonData, setData] = useState([]);
+
+  function getMovies() {
     axios.get('https://jsonplaceholder.typicode.com/users')
     .then(function (response) {
-      // handle success
-      jsonData.push(response.data);
+      let data = response.data;
+      setData(data);
     })
     .catch(function (error) {
       // handle error
@@ -43,13 +28,20 @@ const Movies = () => {
     })
     .finally(function () {
       // always executed
-      console.log(jsonData[0])
     });
-  }); */
+  }
+  getMovies();
 
+
+  // Similar to componentDidMount and componentDidUpdate:
+  /* 
+    useEffect(() => {
+      
+    }); 
+  */
 
   /* Traversy Media code */
-  const [todos, setTodos] = useState([
+  /* const [todos, setTodos] = useState([
     {
       text: 'hej1'
     },
@@ -59,20 +51,22 @@ const Movies = () => {
     {
       text: 'hej2'
     }
-  ]);
+  ]); */
 
 
   return (
     <div className="Movies">
       <h1>Movies</h1>
       <div className="cardGrid">
-        { 
+        {/* { 
           todos.map((todo, index) => (
           <Card key={index} index={index} todo={todo} /> ))
-        }
+          } */}
 
-            {/* {jsonData.map((movie, index) => (
-            <Card key={index} index={index} movie={movie} /> ))} */}
+          {
+            jsonData.map((movie, index) => (
+            <Card key={index} index={index} movie={movie} /> ))
+          }
       </div>
     </div>
   );
