@@ -6,33 +6,36 @@ import './Movies.css';
 /* Components */
 import Card from '../../components/card/Card';
 
-/* You create functions like this above the functional component. */
-
-/* function getMovies() {
-  const axios = require('axios');
-
-  // Make a request for a user with a given ID
-  axios.get('https://jsonplaceholder.typicode.com/users')
-    .then(function (response) {
-      // handle success
-      console.log(response);
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
-    .finally(function () {
-      // always executed
-    });
-} */
+/* 
+axios.get('https://jsonplaceholder.typicode.com/users')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+*/
 
 /* Movie page */
 const Movies = () => {
 
-  /* const [movieArray] = useState(
+  /* 
+  How to define states in react hooks. 
+  With a state(jsonData) and a method for updating the state(setData) 
+  */
+  /* const [jsonData, setData] = useState([]); */
+ 
+  // Similar to componentDidMount and componentDidUpdate:
+  /* useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
     .then(function (response) {
-      const data = response.data;
+      // handle success
+      jsonData.push(response.data);
     })
     .catch(function (error) {
       // handle error
@@ -40,34 +43,36 @@ const Movies = () => {
     })
     .finally(function () {
       // always executed
-    }) 
-  ); */
+      console.log(jsonData[0])
+    });
+  }); */
 
-  const [todos, setTodos] = useState([[
+
+  /* Traversy Media code */
+  const [todos, setTodos] = useState([
     {
-      text: 'hej o hå',
+      text: 'hej1'
     },
     {
-      text: 'sftjhdstjdsytj',
+      text: 'hej2'
     },
     {
-      text: 'dfjytdjy',
+      text: 'hej2'
     }
-  ]]);
+  ]);
+
 
   return (
     <div className="Movies">
       <h1>Movies</h1>
       <div className="cardGrid">
-          
-          {todos[0].map((todo, index) => (
-            <Card key={index} index={index} todo={todo} />
-          ))}
+        { 
+          todos.map((todo, index) => (
+          <Card key={index} index={index} todo={todo} /> ))
+        }
 
-          {/* {movieArray.map((movie, index) => (
-            <Card key={index} index={index} movie={movie}></Card>
-          ))} */}
-          
+            {/* {jsonData.map((movie, index) => (
+            <Card key={index} index={index} movie={movie} /> ))} */}
       </div>
     </div>
   );
