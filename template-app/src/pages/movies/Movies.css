@@ -12,8 +12,13 @@
     text-align: center;
     font-weight: bold;
     font-family: 'Noto Serif';
-    margin: 5%;
+    margin-top: 5%;
     font-size: 40px;
+}
+.moviePageSubtext {
+    text-align: center;
+    font-family: 'Noto Serif';
+    font-size: 18px;
 }
 
 /* Mobile */

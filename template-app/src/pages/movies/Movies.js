@@ -9,24 +9,22 @@ import Card from '../../components/card/Card';
 
 /* Movie page */
 const Movies = () => {
-
+  /* https://api.themoviedb.org/3/movie/550?api_key=API_KEY_HERE */
+  /* Url for showing Posters "https://image.tmdb.org/t/p/w500/" + array.poster_path */
+  
   /* 
   How to define states in react hooks. 
   With a state(jsonData) and a method for updating the state(setData) 
   */
   const [jsonData, setData] = useState([]);
-  /* https://api.themoviedb.org/3/movie/550?api_key=API_KEY_HERE */
-  /* Url for showing Posters "https://image.tmdb.org/t/p/w500/" + array.poster_path */
+
+  /* Don't forget to copy past in your API key in the url! */
   function getMovies() {
     axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY_HERE&language=en-US&page=1')
       .then(function (response) {
-      
-        console.log(response.data.results)
-
         /* If i do this i get all data but it loops endlessly? why? */
-        /* const data = response.data.results;
-        setData(data); */
-
+        let data = response.data.results;
+        setData(data);
       })
       .catch(function (error) {
         // handle error
@@ -37,35 +35,20 @@ const Movies = () => {
       });
   }
   
-
-  // Similar to componentDidMount and componentDidUpdate:
+  /* 
+  The useEffect method is similar to componentDidMount and componentDidUpdate.
+  The [] at the end tells the useEffect method only run 1 time after the component
+  is done rendering.
+  */
   useEffect(() => {
-    getMovies()
-  }); 
+    getMovies();
+  }, []); 
  
-  /* Traversy Media code */
-  /* const [todos, setTodos] = useState([
-    {
-      text: 'hej1'
-    },
-    {
-      text: 'hej2'
-    },
-    {
-      text: 'hej2'
-    }
-  ]); */
-
-
   return (
     <div className="Movies">
       <h1 className="moviePageTitle">Top 20 Movies</h1>
+      <p className="moviePageSubtext">Most rated movies on the movie database api.</p>
       <div className="cardGrid">
-        {/* Traversy Media code */}
-        {/* { 
-          todos.map((todo, index) => (
-          <Card key={index} index={index} todo={todo} /> ))
-          } */}
         {
           jsonData.map((movie, index) => (
             <Card key={index} index={index} movie={movie} />))
