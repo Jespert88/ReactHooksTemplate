@@ -4,3 +4,4 @@
 .navbar-brand {height: 10px; width: auto;}
 .navbar-brand {color: #fff !important;}
 .nav-link {color: #fff !important;}
+.nav-link:hover{   text-shadow: 1px 1px 10px rgb(139, 186, 207) !important;}

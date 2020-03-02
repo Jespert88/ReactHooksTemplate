@@ -6,31 +6,51 @@
     background-repeat: no-repeat;
     background-position: top center; */
 }
-
 .HomeBox {
-    margin-top: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     border: 0;
     border-radius: 10px;
     box-shadow: 1px 1px 10px #222;
     background-color: #fff;
 }
-
 .HomeTitle {
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    font-family: 'open sans';
+    font-family: 'Noto Serif';
     font-size: 40px;
 }
-
+.secondHomeTitle {
+    text-align: center;
+    font-family: 'Noto Serif';
+    font-size: 20px;
+}
 .HomeSubText {
-    padding: 10px;
-    font-family: 'open sans';
+    padding-left: 20px;
+    font-family: 'Noto Serif';
+}
+.homeCardGrid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
 }
 
 /* Mobile */
 
-@media (min-width: 360px) and (max-width: 600px) {}
+@media (min-width: 360px) and (max-width: 600px) {
+    .homeCardGrid {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px; 
+    }
+}
 
 /* Tablet */
 
