@@ -1,0 +1,22 @@
+.backToTopBtnContainer {
+    background-color: #18ab29;
+    right: 30px;
+    bottom: 30px;
+}
+
+.toTopBtn {
+    opacity: 0.6;
+    background-color: rgb(53, 104, 150);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+}
+
+.toTopBtn:hover {
+    background-color: rgb(42, 67, 88);
+}

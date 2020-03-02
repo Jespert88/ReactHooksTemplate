@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,13 +13,16 @@ import Movies from '../src/pages/movies/Movies';
 
  /* Components */
 import Navbar from '../src/components/navbar/Navbar';
+/* import BackToTop from '../src/components/backToTop/BackToTopBtn'; */
 
 
 function App() {
+
   return (
     <Router>
       <div className="App">
         <Navbar />
+        {/* <BackToTop /> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

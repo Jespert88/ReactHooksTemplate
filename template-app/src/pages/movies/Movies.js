@@ -6,6 +6,7 @@ import './Movies.css';
 /* Components */
 import Card from '../../components/card/Card';
 import Footer from '../../components/footer/Footer';
+import BackToTopBtn from '../../components/backToTop/BackToTopBtn';
 
 /* Movie page */
 const Movies = () => {
@@ -20,7 +21,7 @@ const Movies = () => {
 
   /* Don't forget to copy past in your API key in the url! */
   function getMovies() {
-    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY_HERE&language=en-US&page=1')
+    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=92bc743bbc32dc90030e2036637f8276&language=en-US&page=1')
       .then(function (response) {
         let data = response.data.results;
         setData(data);
@@ -34,7 +35,7 @@ const Movies = () => {
         // always executed
       });
   }
-  
+
   /* 
   The useEffect method is similar to componentDidMount and componentDidUpdate.
   The [] at the end tells the useEffect method only run 1 time after the component
@@ -54,6 +55,7 @@ const Movies = () => {
             <Card key={index} index={index} movie={movie} />))
         }
       </div>
+      <BackToTopBtn />
       <Footer></Footer>
     </div>
   );
