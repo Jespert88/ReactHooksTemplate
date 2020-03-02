@@ -1,50 +1,37 @@
+.containerForImgWallpaper {
+    /* For image as background */
+    /* height: 100vh;
+    background-image: url('../../assets/wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; */
+}
 
-.Home {
+.HomeBox {
     margin-top: 20%;
     border: 0;
     border-radius: 10px;
     box-shadow: 1px 1px 10px #222;
     background-color: #fff;
 }
+
 .HomeTitle {
     padding: 10px;
     text-align: center;
     font-weight: bold;
     font-family: 'open sans';
-    margin-top: 5%;
     font-size: 40px;
-    
- }
+}
+
 .HomeSubText {
     padding: 10px;
     font-family: 'open sans';
 }
- 
- /* Mobile */
- @media (min-width: 360px) and (max-width: 600px) {
-    .Home {
-        margin-top: 40%;
-        border: 0;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px #222;
-        background-color: #fff;
-    }
-    .HomeTitle {
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-        font-family: 'open sans';
-        margin-top: 5%;
-        font-size: 40px;
-        
-     }
-    .HomeSubText {
-        padding: 10px;
-        font-family: 'open sans';
-    }
- }
- 
- /* Tablet */
- @media (min-width: 768px) and (max-width: 1024px) {
-     
- }
+
+/* Mobile */
+
+@media (min-width: 360px) and (max-width: 600px) {}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {}
