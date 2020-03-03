@@ -4,17 +4,16 @@ import { Link } from "react-router-dom";
 import '../navbar/Navbar.css';
 import axios from 'axios';
 
-const Navbar = ({ movie }) => {
+const Navbar = () => {
 
     const [searchValue, setSearchValue] = useState("");
 
     const handleSearchInputChanges = (e) => {
         setSearchValue(e.target.value);
-        console.log(searchValue);
     }
 
     const resetInputField = () => {
-        setSearchValue("")
+        setSearchValue("");
     }
 
     const callSearchFunction = (e) => {

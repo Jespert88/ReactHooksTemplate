@@ -1,7 +1,8 @@
 
-#Navbar {background-color: #4E7CA3 !important;}
+#Navbar {background-color: #222 !important;}
 #logoImg {height: 30px; width: auto; margin: 5px;}
 .navbar-brand {height: 10px; width: auto;}
 .navbar-brand {color: #fff !important;}
+.navbar-toggler {background-color: #444 !important;}
 .nav-link {color: #fff !important;}
-.nav-link:hover{   text-shadow: 1px 1px 10px rgb(139, 186, 207) !important;}
+.nav-link:hover{   text-shadow: 1px 1px 5px rgb(117, 250, 228) !important;}
