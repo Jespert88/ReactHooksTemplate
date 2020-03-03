@@ -13,7 +13,7 @@ const Card = ({movie}) => {
     return (
         <div className="card">
             {/* <img src="https://loremflickr.com/320/240" className="img-fluid" /> */}
-            <img src={poster} className="img-fluid" id="posterImg" />
+            <img src={poster} className="img-fluid" id="posterImg" alt="..." />
             
             <div className="card-body">
                 <h5 className="card-title">{movie.title}</h5>
