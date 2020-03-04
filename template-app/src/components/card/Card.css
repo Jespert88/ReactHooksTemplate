@@ -1,18 +1,54 @@
 .card {
     border: 0;
-    border-radius: 10px;
     width: 18rem;
-    box-shadow: 1px 1px 10px #222;
+    box-shadow: 0px 0px 10px 0px #222222;
+    overflow: hidden;
 }
-#posterImg {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+
+
+/* Shiny effect */
+
+.card::before {
+    content: "";
+    z-index: 10;
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    top: 100%;
+    left: 100%;
+    background: linear-gradient(transparent 0%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.1) 55%, transparent 100%);
+    transition: all 0.8s;
+    transform: rotate(-45deg);
+    animation: shine 0.5s infinite forwards;
 }
+
+
+/* Shiny effect */
+
+.card:hover:before {
+    left: -130%;
+    top: -130%;
+}
+
 .card-title {
     text-align: center;
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.textBody {
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    top: 0%;
+    height: 100%;
+    box-shadow: 0px 0px 5px 0px #222222;
+}
+
+.card-text {
+    padding: 8px;
 }
 
 .btnContainer {
@@ -23,17 +59,18 @@
     background: #4e7ca3;
     border: 0px solid #556699;
     border-radius: 1000px;
-    padding: 5px 20px;
+    padding: 5px 40px;
     color: #ffffff;
     display: inline-block;
     font-size: 18px;
     text-align: center;
 }
+
 .infoBtn:hover {
     background: #91badf;
     border: 0px solid #556699;
     border-radius: 1000px;
-    padding: 5px 20px;
+    padding: 5px 40px;
     color: #ffffff;
     display: inline-block;
     font-size: 18px;
@@ -50,6 +87,7 @@
         box-shadow: 1px 1px 10px #222;
     }
 }
+
 
 /* Tablet */
 

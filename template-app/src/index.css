@@ -1,18 +1,38 @@
 html {
-  min-height: 100vh;
+    min-height: 100vh;
 }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f2f2f2;
- 
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background-color: #f2f2f2; */
+    /* image as background */
+    /* min-height: 100vh;
+    background-image: url('../src/assets/wallpaper2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0d1851+8,2e73db+36,3e95dd+53,8e44e2+69,4c105e+94 */
+    background: rgb(13, 24, 81);
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba(13, 24, 81, 1) 8%, rgba(46, 115, 219, 1) 36%, rgba(62, 149, 221, 1) 53%, rgba(142, 68, 226, 1) 69%, rgba(76, 16, 94, 1) 94%);
+    /* FF3.6-15 */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(8%, rgba(13, 24, 81, 1)), color-stop(36%, rgba(46, 115, 219, 1)), color-stop(53%, rgba(62, 149, 221, 1)), color-stop(69%, rgba(142, 68, 226, 1)), color-stop(94%, rgba(76, 16, 94, 1)));
+    /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(45deg, rgba(13, 24, 81, 1) 8%, rgba(46, 115, 219, 1) 36%, rgba(62, 149, 221, 1) 53%, rgba(142, 68, 226, 1) 69%, rgba(76, 16, 94, 1) 94%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, rgba(13, 24, 81, 1) 8%, rgba(46, 115, 219, 1) 36%, rgba(62, 149, 221, 1) 53%, rgba(142, 68, 226, 1) 69%, rgba(76, 16, 94, 1) 94%);
+    /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(45deg, rgba(13, 24, 81, 1) 8%, rgba(46, 115, 219, 1) 36%, rgba(62, 149, 221, 1) 53%, rgba(142, 68, 226, 1) 69%, rgba(76, 16, 94, 1) 94%);
+    /* IE10 preview */
+    background: linear-gradient(45deg, rgba(13, 24, 81, 1) 8%, rgba(46, 115, 219, 1) 36%, rgba(62, 149, 221, 1) 53%, rgba(142, 68, 226, 1) 69%, rgba(76, 16, 94, 1) 94%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0d1851', endColorstr='#4c105e', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
