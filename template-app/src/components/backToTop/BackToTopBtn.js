@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import arrow from '../../assets/up-arrow.png';
 import '../backToTop/BackToTopBtn.css';
 
 const BackToTopBtn = () => {
@@ -19,7 +20,9 @@ const BackToTopBtn = () => {
 
   return (
     <div className="btnContainer">
-      <button className="toTopBtn" onClick={() => toTop()}>Top</button>
+      <button className="toTopBtn" onClick={() => toTop()}>
+        <img src={arrow} className="img-fluid" alt="..." />
+      </button>
     </div>
   );
 }

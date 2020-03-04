@@ -7,8 +7,6 @@ const Card = ({ movie }) => {
 
     const [showText, setShowText] = useState(false);
 
-   
-
     let poster = "https://image.tmdb.org/t/p/w500/" + movie.poster_path;
     //let testPoster = "https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg"
 
@@ -19,7 +17,8 @@ const Card = ({ movie }) => {
             <div className="textBody">
                 {showText &&
                     <p className="card-text">
-                        {movie.overview}
+                        {movie.overview}<br></br><br></br>
+                        {movie.release_date}
                     </p>
                 }
             </div>
