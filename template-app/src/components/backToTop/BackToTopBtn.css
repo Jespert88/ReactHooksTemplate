@@ -5,7 +5,7 @@
 
 .toTopBtn {
     opacity: 0.7;
-    background-color: rgb(7, 48, 85);
+    background-color: #520b68ab;
     width: 50px;
     height: 50px;
     position: fixed;
@@ -17,5 +17,5 @@
 }
 
 .toTopBtn:hover {
-    background-color: rgb(130, 192, 243);
+    background-color: #9414bb;
 }

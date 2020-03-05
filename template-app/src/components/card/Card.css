@@ -30,6 +30,20 @@
     top: -130%;
 }
 
+.rateContainer {
+    z-index: 10;
+    position: absolute;
+    font-size: 20px;
+    padding: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 4px #000;
+}
+
+#ratingStarImg {
+    height: 15px;
+    width: 15px;
+}
+
 .card-title {
     text-align: center;
     padding: 10px;

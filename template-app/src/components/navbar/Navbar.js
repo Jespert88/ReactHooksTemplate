@@ -70,7 +70,7 @@ const Navbar = () => {
                         type="submit"
                         value="Search"
                         className="btn btn-info my-2 my-sm-0"
-                        to="/"
+                        to="/movies"
                     />
                 </form>
 
@@ -79,4 +79,6 @@ const Navbar = () => {
     );
 }
 export default Navbar;
+
+
 

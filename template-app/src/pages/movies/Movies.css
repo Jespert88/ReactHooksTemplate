@@ -24,6 +24,41 @@
     color: #fff;
 }
 
+.btnsContainer {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.chooseBtns {
+    border: 0px;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #fff;
+}
+
+.chooseBtns:hover {
+    text-shadow: 1px 1px 10px rgb(95, 250, 242);
+}
+
+
+/* .chooseBtns {
+    border: 0px;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px;
+    width: 120px;
+    outline: none;
+    background-color: #1cb7cc;
+    color: #fff;
+}
+.chooseBtns:hover {
+    background-color: #1cb7cc8a;
+} */
+
 
 /* Mobile */
 

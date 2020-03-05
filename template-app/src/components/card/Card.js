@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import Star from '../../assets/star.png';
 import '../card/Card.css';
 
 
@@ -13,6 +14,10 @@ const Card = ({ movie }) => {
     return (
         <div className="card" type="button" onClick={() => setShowText(!showText)}>
             {/* <img src="https://loremflickr.com/320/240" className="img-fluid" /> */}
+            <div className="rateContainer">
+            <img src={Star} className="img-fluid" id="ratingStarImg" alt="..." />
+                {movie.vote_average}
+            </div>
             <img src={poster} className="img-fluid" id="posterImg" alt="..." />
             <div className="textBody">
                 {showText &&
