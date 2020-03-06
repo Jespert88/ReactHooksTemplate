@@ -33,42 +33,34 @@
 .rateContainer {
     z-index: 10;
     position: absolute;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 18px;
+    padding: 10px;
     color: #fff;
     text-shadow: 1px 1px 4px #000;
 }
 
 #ratingStarImg {
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
 }
 
 .card-title {
     text-align: center;
     padding: 10px;
-    font-size: 18px;
     font-weight: bold;
 }
 
 .textBody {
-    background-color: #fff;
+    color: #fff;
+    background-color: #222;
     overflow: hidden;
     position: absolute;
     z-index: 100;
     top: 0%;
     height: 100%;
     box-shadow: 0px 0px 5px 0px #222222;
+    overflow: auto;
 }
-
-
-/* Test */
-
-
-/* .textBody:hover {
-    transition: all 0.8s;
-    transform: rotateX(-180deg);
-} */
 
 .card-text {
     padding: 8px;

@@ -10,6 +10,7 @@ import './App.css';
 /* Pages */
 import Home from '../src/pages/home/Home';
 import Movies from '../src/pages/movies/Movies';
+import SearchedMovie from '../src/pages/searchedMovie/SearchedMovie';
 
  /* Components */
 import Navbar from '../src/components/navbar/Navbar';
@@ -22,13 +23,15 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        {/* <BackToTop /> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/movies">
             <Movies />
+          </Route>
+          <Route path="/searchedmovie">
+            <SearchedMovie />
           </Route>
           <Route path="/">
             <Home />

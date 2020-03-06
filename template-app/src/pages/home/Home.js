@@ -16,10 +16,8 @@ function Home() {
   function favoriteMovies() {
     axios.get('https://api.themoviedb.org/3/search/movie?api_key=API_KEY_HERE&language=en-US&query=Lord%20of%20the%20rings&page=1&include_adult=false')
       .then(function (response) {
-       
         let SplitData = response.data.results.slice(0, 3);
         setData(SplitData);
-     
       })
       .catch(function (error) {
         // handle error
