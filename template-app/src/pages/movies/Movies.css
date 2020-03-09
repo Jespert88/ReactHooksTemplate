@@ -10,7 +10,7 @@
 .moviePageTitle {
     text-align: center;
     font-weight: bold;
-    font-family: 'Noto Serif';
+    font-family: 'Open Sans', sans-serif;
     margin-top: 5%;
     font-size: 40px;
     color: #fff;
@@ -19,7 +19,7 @@
 
 .moviePageSubtext {
     text-align: center;
-    font-family: 'Noto Serif';
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     color: #fff;
 }
@@ -30,17 +30,19 @@
 }
 
 .chooseBtns {
-    border: 0px;
-    border-radius: 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
     margin: 5px;
     padding: 5px;
     outline: none;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .chooseBtns:hover {
+    box-shadow: 1px 1px 10px rgb(95, 250, 242);
     text-shadow: 1px 1px 10px rgb(95, 250, 242);
 }
 
@@ -70,6 +72,21 @@
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 20px;
+    }
+    .chooseBtns {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+        outline: none;
+        background-color: transparent;
+        font-size: 15px;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .chooseBtns:active {
+        box-shadow: 1px 1px 10px rgb(95, 250, 242);
+        text-shadow: 1px 1px 10px rgb(95, 250, 242);
     }
 }
 

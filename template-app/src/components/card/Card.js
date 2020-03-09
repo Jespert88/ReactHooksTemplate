@@ -18,7 +18,7 @@ const Card = ({ movie }) => {
             <img src={Star} className="img-fluid" id="ratingStarImg" alt="..." />
                 {movie.vote_average}
             </div>
-            <img src={poster} className="img-fluid" id="posterImg" alt='No image..'/>
+            <img src={poster} className="img-fluid" id="posterImg" alt='...'/>
             <div className="textBody">
                 {showText &&
                     <div className="card-text">

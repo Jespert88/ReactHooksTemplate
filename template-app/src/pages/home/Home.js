@@ -43,14 +43,14 @@ function Home() {
               <div className="HomeBox">
                 <h1 className="HomeTitle">Welcome</h1>
                 <p className="HomeSubText">
-                  This is my template app that i created in order for learning how React Hooks works.<br></br>
+                  This is my template app that i created in order for learning how React Hooks works.
                   As i become a better programmer i will update this to fix beginner mistakes and make it more advance.
                 </p><br></br>
                 <h3 className="secondHomeTitle">These are my favorite movies</h3>
                 <div className="homeCardGrid">
                   {
                     jsonData.map((movie, index) => (
-                      <Card className="homeCardStyle" key={index} index={index} movie={movie} />
+                      <Card key={index} index={index} movie={movie} />
                     ))
                   }
                 </div>

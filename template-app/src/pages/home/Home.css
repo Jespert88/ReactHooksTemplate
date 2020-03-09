@@ -1,7 +1,5 @@
 .container-fluid {
     min-height: 100%;
-    /* Equal to height of footer */
-    /* But also accounting for potential margin-bottom of last child */
 }
 
 
@@ -29,19 +27,22 @@
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Noto Serif';
-    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.HomeSubText {
+    margin-right: 10%;
+    margin-left: 10%;
+    /*  background-color: forestgreen; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
 }
 
 .secondHomeTitle {
     text-align: center;
-    font-family: 'Noto Serif';
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
     font-size: 20px;
-}
-
-.HomeSubText {
-    padding-left: 20px;
-    font-family: 'Noto Serif';
 }
 
 .homeCardGrid {
@@ -65,9 +66,44 @@
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
+    .HomeSubText {
+        margin-right: 5%;
+        margin-left: 5%;
+        /*  background-color: forestgreen; */
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+    }
+    .secondHomeTitle {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        font-size: 20px;
+    }
 }
 
 
 /* Tablet */
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .homeCardGrid {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    .HomeSubText {
+        margin-right: 5%;
+        margin-left: 5%;
+        /*  background-color: forestgreen; */
+        font-family: 'sans-serif';
+        font-size: 16px;
+    }
+    .secondHomeTitle {
+        text-align: center;
+        font-family: 'sans-serif';
+        font-style: italic;
+        font-size: 20px;
+    }
+}

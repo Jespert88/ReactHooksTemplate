@@ -5,6 +5,7 @@ import './SearchedMovie.css';
 
 /* Components */
 import Card from '../../components/card/Card';
+import BackToTopBtn from '../../components/backToTop/BackToTopBtn';
 
 /* Movie page */
 const SearchedMovie = () => {
@@ -82,6 +83,7 @@ const SearchedMovie = () => {
                                     <Card key={index} index={index} movie={movie} className="searchMovieCard" />))
                             }
                         </div>
+                        <BackToTopBtn />
                     </div>
                     <div className="col-sm-12 col-md-1 col-xl-3"></div>
                 </div>

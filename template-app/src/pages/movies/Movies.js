@@ -9,8 +9,6 @@ import BackToTopBtn from '../../components/backToTop/BackToTopBtn';
 
 /* Movie page */
 const Movies = () => {
-  /* https://api.themoviedb.org/3/movie/550?api_key=API_KEY_HERE */
-  /* Url for showing Posters "https://image.tmdb.org/t/p/w500/" + array.poster_path */
   /* 
   How to define states in react hooks. 
   With a state(jsonData) and a method for updating the state(setData) 
@@ -22,7 +20,7 @@ const Movies = () => {
   const [nowPlayingVisible, setNowPlayVisible] = useState(false);
 
   const [upcomingData, setUpcomingData] = useState([]);
-  const [upcomingVisible, setUpcoming] = useState([]);
+  const [upcomingVisible, setUpcoming] = useState(false);
 
 
   /* Don't forget to copy past in your API key in the url! */
@@ -71,6 +69,28 @@ const Movies = () => {
       });
   }
 
+
+  function toggleNowPlaying() {
+    setNowPlayVisible(!nowPlayingVisible);
+    setUpcoming(false);
+    setTop20(false)
+  }
+
+  function toggleUpComing() {
+    setNowPlayVisible(false);
+    setUpcoming(!upcomingVisible);
+    setTop20(false)
+  }
+
+  function toggleTop20() {
+    setNowPlayVisible(false);
+    setUpcoming(false);
+    setTop20(!top20Visible);
+  }
+
+
+
+
   /* 
   The useEffect method is similar to componentDidMount and componentDidUpdate.
   The [] at the end tells the useEffect method only run 1 time after the component
@@ -82,14 +102,17 @@ const Movies = () => {
     upComingMovies();
   }, []);
 
+
   return (
     <div className="Movies">
 
-      <div className="btnsContainer"> 
-        <button className="chooseBtns" onClick={() => setNowPlayVisible(!nowPlayingVisible)}> Now Playing </button>
-        <button className="chooseBtns" onClick={() => setUpcoming(!upcomingVisible)}> Up coming </button>
-        <button className="chooseBtns" onClick={() => setTop20(!top20Visible)} > Top 20 rated </button>
+      <div className="btnsContainer">
+        <button className="chooseBtns" onClick={() => toggleNowPlaying()}> Now Playing </button>
+        <button className="chooseBtns" onClick={() => toggleUpComing()}> Up coming </button>
+        <button className="chooseBtns" onClick={() => toggleTop20()} > Top 20 rated </button>
       </div>
+
+
 
       {/* Now Playing Movies */}
       <div>
@@ -97,7 +120,6 @@ const Movies = () => {
           nowPlayingVisible &&
           <div>
             <h1 className="moviePageTitle">Now Playing</h1>
-            <p className="moviePageSubtext">Movies in cinema right now.</p>
             <div className="cardGrid">
               {
                 nowPlayingData.map((movie, index) => (
@@ -114,7 +136,6 @@ const Movies = () => {
           upcomingVisible &&
           <div>
             <h1 className="moviePageTitle">Up coming</h1>
-            <p className="moviePageSubtext">Movies that hit the cinemas soon.</p>
             <div className="cardGrid">
               {
                 upcomingData.map((movie, index) => (
@@ -130,8 +151,7 @@ const Movies = () => {
         {
           top20Visible &&
           <div>
-            <h1 className="moviePageTitle">Top 20 Movies</h1>
-            <p className="moviePageSubtext">Most rated movies on the movie database api.</p>
+            <h1 className="moviePageTitle">Top 20 rated movies</h1>
             <div className="cardGrid">
               {
                 jsonData.map((movie, index) => (
@@ -141,10 +161,6 @@ const Movies = () => {
           </div>
         }
       </div>
-
-
-
-
 
       <BackToTopBtn />
     </div>
