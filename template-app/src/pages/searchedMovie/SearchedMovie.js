@@ -27,7 +27,7 @@ const SearchedMovie = () => {
         e.preventDefault();
 
         /* Post the values */
-        axios.get('https://api.themoviedb.org/3/search/movie?api_key=API_KEY_HERE&language=en-US&query=' + inputValue + '&page=1&include_adult=false')
+        axios.get('https://api.themoviedb.org/3/search/movie?api_key=92bc743bbc32dc90030e2036637f8276&language=en-US&query=' + inputValue + '&page=1&include_adult=false')
             .then(function (response) {
                 let SplitData = response.data.results.slice(0, 10);
                 setSearchMovie(SplitData);

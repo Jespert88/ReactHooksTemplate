@@ -25,7 +25,7 @@ const Movies = () => {
 
   /* Don't forget to copy past in your API key in the url! */
   function getMovies() {
-    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY_HERE&language=en-US&page=1')
+    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=92bc743bbc32dc90030e2036637f8276&language=en-US&page=1')
       .then(function (response) {
         let data = response.data.results;
         setData(data);
@@ -40,7 +40,7 @@ const Movies = () => {
   }
 
   function getNowPlaying() {
-    axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=API_KEY_HERE&language=en-US&page=1')
+    axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=92bc743bbc32dc90030e2036637f8276&language=en-US&page=1')
       .then(function (response) {
         let dataNowPlaying = response.data.results;
         setNowPlaying(dataNowPlaying);
@@ -55,7 +55,7 @@ const Movies = () => {
   }
 
   function upComingMovies() {
-    axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=API_KEY_HERE&language=en-US&page=1')
+    axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=92bc743bbc32dc90030e2036637f8276&language=en-US&page=1')
       .then(function (response) {
         let upcomingData = response.data.results;
         setUpcomingData(upcomingData);

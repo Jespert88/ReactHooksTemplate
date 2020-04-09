@@ -1,28 +1,24 @@
 .Footer {
     background-color: #222;
-    text-align: center;
     display: flex;
 }
 
-#footerImg {
+.linkContainer {
+    float: right;
+    padding: 5px;
+}
+
+.linkImg {
     width: auto;
-    height: 50px;
-    margin: 20px;
+    height: 40px;
+    margin: 5px;
 }
 
-.imgFooterContainer {
-    text-align: right;
-    /* background-color: green; */
-    flex: 0 0 50%;
-}
-
-.footerTextContainer {
-    padding: 30px;
-    text-align: left;
-    /* background-color: blue; */
-    flex: 0 0 50%;
-    font-family: 'Dancing Script';
-    font-size: 20px;
+.footerText {
+    float: left;
+    padding: 5px;
+    margin-top: 15px;
+    font-family: georgia, garamond, serif;
     color: #fff;
 }
 
@@ -30,18 +26,26 @@
 /* Mobile */
 
 @media (min-width: 360px) and (max-width: 600px) {
-    .imgFooterContainer {
-        /* text-align: right; */
-        /* background-color: green; */
-        /* flex: 0; */
+    .Footer {
+        background-color: #222;
+        display: flex;
     }
-    .footerTextContainer {
-        /* padding: 30px; */
-        /* text-align: left; */
-        /* background-color: blue; */
-        /* flex: 0; */
-        font-family: 'Dancing Script';
-        font-size: 14px;
+    .linkContainer {
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    .linkImg {
+        width: auto;
+        height: 40px;
+        margin: 5px;
+    }
+    .footerText {
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        font-family: georgia, garamond, serif;
         color: #fff;
     }
 }
@@ -49,4 +53,25 @@
 
 /* Tablet */
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Footer {
+        background-color: #222;
+        display: flex;
+    }
+    .linkContainer {
+        float: right;
+        padding: 5px;
+    }
+    .linkImg {
+        width: auto;
+        height: 40px;
+        margin: 5px;
+    }
+    .footerText {
+        float: left;
+        padding: 5px;
+        margin-top: 15px;
+        font-family: georgia, garamond, serif;
+        color: #fff;
+    }
+}
